@@ -1,12 +1,11 @@
 import leia from "readline-sync"
 
-var quantidade = leia.question("digite a quantidade de maças que tu quer comprar: ");
+var qtd = leia.questionInt("digite a quantidade de macas: \n");
 
-var preço = 0.30
-
-if (quantidade >= 12){
-    console.log("preço = quantidade * 0.25");
-} else {
-    console.log("preço = quantidade * 0.30");
+if(qtd < 12) {
+    var total = qtd * 0.30;
+    console.log("valor total R$" + total.toFixed(2))
+}else {
+    var total = qtd * 0.25
+    console.log("valor total R$"+ total.toFixed(2))
 }
-alert("o valor da compra é: R$" + preço.toFixed(2));
